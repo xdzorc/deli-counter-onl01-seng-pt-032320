@@ -1,7 +1,5 @@
 katz_deli = []
 
-
-def line(array) 
   if array.length >= 1
     newarray = []
     counter = 1 
@@ -17,7 +15,7 @@ end
 
 line(katz_deli)
 
-def line_simple(array) # this one follows the same mechanics as learn.co
+def line_simple(array) 
   current_line = "The simple line is currently:"
   array.each.with_index(1) do |value, indexemus|  
   # "each.with_index" is the method...must use "index"
