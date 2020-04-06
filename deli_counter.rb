@@ -7,9 +7,6 @@ def take_a_number(array, name)
   return name, position 
 end 
 
-# take_a_number(katz_deli, "Grace")
-# take_a_number(katz_deli, "Tom")
-# take_a_number(katz_deli, "Alan")
 
 def line(array) 
   if array.length == 0 
@@ -23,9 +20,6 @@ def line(array)
   puts "#{message}"
   end 
 end 
- 
-line(katz_deli)
-
 
 def now_serving(array)
   if array.empty? == true 
@@ -35,4 +29,4 @@ def now_serving(array)
   end 
 end 
 
-now_serving(katz_deli)
+
