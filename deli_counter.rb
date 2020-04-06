@@ -1,49 +1,38 @@
-katz_deli = []
-def line(name)
-  if array.length >= 1
-    newarray = []
-    counter = 1 
-    array.each do |name|
-      newarray.push("#{counter}. #{name}")
-      counter += 1 
-    end 
-    puts "The line is currently: #{newarray.join(" ")}"
-  else
-    puts "The line is currently empty."
-  end
-end
+katz_deli = [] 
 
-# line(katz_deli)
-
-def line_simple(array) 
-  current_line = "The simple line is currently:"
-  array.each.with_index(1) do |a, b|  
-    current_line << " #{b}. #{a},"    
-  end 
-  puts current_line
+def take_a_number(array, name)
+  array.push(name)
+  position = array.index(name)
+  puts "Welcome, #{name}. You are number #{array.index(name)+1} in line."
+  return name, position 
 end 
-  
-# line_simple(katz_deli)  
+
+take_a_number(katz_deli, "Grace")
+take_a_number(katz_deli, "Tom")
+take_a_number(katz_deli, "Alan")
+
+def line(array) 
+  if array.length == 0 
+    puts "The line is currently empty."
+  else 
+    message = "The line is currently:"
+    
+  array.each_with_index do |value, index| 
+    message += " #{index.to_i+1}. #{value}"
+  end 
+  puts "#{message}"
+  end 
+end 
+ 
+line(katz_deli)
 
 
+def now_serving(array)
+  if array.empty? == true 
+    puts "There is nobody waiting to be served!"
+  elsif array.empty? == false 
+    puts "Currently serving #{array.shift}."
+  end 
+end 
 
-
-def take_a_number(line, name)
-  line.push(new_person) # could say: "line << new_person"
-  puts "Welcome, #{name}. You are number #{line.length} in line."
-end
-
-# take_a_number(katz_deli, "Fyvish")
-
-def now_serving(line)
-  if line.length == 0 # could say: "if deli.empty?"
-    puts"There is nobody waiting to be served!"
-  else
-    puts "Currently serving #{line[0]}." # could say: "Currently serving #{line.first}."
-    line.shift # this works in the IDE but no on repl.it
-  end
-end
-
-puts now_serving(katz_deli)
-puts katz_deli
-
+now_serving(katz_deli)
