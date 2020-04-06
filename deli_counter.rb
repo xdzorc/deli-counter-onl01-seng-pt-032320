@@ -18,7 +18,6 @@ line(katz_deli)
 def line_simple(array) 
   current_line = "The simple line is currently:"
   array.each.with_index(1) do |a, b|  
-  # "each.with_index" is the method...must use "index"
     current_line << " #{b}. #{a},"    
   end 
   puts current_line
