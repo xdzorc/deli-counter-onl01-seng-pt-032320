@@ -12,12 +12,12 @@ def line(array)
   if array.length == 0 
     puts "The line is currently empty."
   else 
-    message = "The line is currently:"
+    new = "The line is currently:"
     
   array.collect.with_index do |a, b| 
-    message += " #{b+1}. #{a}"
+    new += " #{b+1}. #{a}"
   end 
-  puts "#{message}"
+  puts "#{new}"
   end 
 end 
 
