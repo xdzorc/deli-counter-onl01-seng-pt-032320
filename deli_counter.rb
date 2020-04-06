@@ -1,5 +1,5 @@
 katz_deli = []
-
+def line(name)
   if array.length >= 1
     newarray = []
     counter = 1 
@@ -13,7 +13,7 @@ katz_deli = []
   end
 end
 
-line(katz_deli)
+# line(katz_deli)
 
 def line_simple(array) 
   current_line = "The simple line is currently:"
@@ -23,17 +23,17 @@ def line_simple(array)
   puts current_line
 end 
   
-line_simple(katz_deli)  
+# line_simple(katz_deli)  
 
 
 
 
-def take_a_number(line, new_person)
+def take_a_number(line, name)
   line.push(new_person) # could say: "line << new_person"
-  puts "Welcome, #{new_person}. You are number #{line.length} in line."
+  puts "Welcome, #{name}. You are number #{line.length} in line."
 end
 
-take_a_number(katz_deli, "Fyvish")
+# take_a_number(katz_deli, "Fyvish")
 
 def now_serving(line)
   if line.length == 0 # could say: "if deli.empty?"
